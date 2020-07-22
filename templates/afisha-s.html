@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block menu %}
+<nav id="m_nu" class="nav nav-pills nav-fill bg-light">
+ <li class="nav-item">
+        <a class="nav-link" href="/">Главная<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/info">Информация о нас</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url "news" %}">Новости</a>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Кинотеатр
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item active" href="{% url "afisha" %}">Афиша</a>
+          <a class="dropdown-item" href="{% url "anons" %}">Анонсы</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Документы</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Услуги</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Контакты</a>
+      </li>
+</nav>
+{% endblock %}
+
+{% block content %}
+
+
+<br>
+<div class="container">
+
+	<div class="row">
+    <div class="col-md-1"></div>
+<div class="col">
+<div class="card border-primary">
+  <div class="card-header bg-light" style="font-size: 14pt;">Расписание сеансов с 25.05 по 31.05</div>
+  <div class="card-body">
+    <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Картинка</th>
+      <th scope="col">Название</th>
+      <th scope="col">Время</th>
+      <th scope="col">Цена</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th><img style="width: 300px; height: 400px" src="{% static "images/1.png"%}"></th>
+      <td><p class="h4">Достать ножи.</p> 
+      <p>На следующее утро после празднования 85-летия известного автора криминальных романов Харлана Тромби виновника торжества находят мёртвым. Налицо — явное самоубийство, но полиция по протоколу опрашивает всех присутствующих в особняке членов семьи, хотя, в этом деле больше заинтересован частный детектив Бенуа Блан. Тем же утром он получил конверт с наличными от неизвестного и заказ на расследование смерти Харлана. Не нужно быть опытным следователем, чтобы понять, что все приукрашивают свои отношения с почившим главой семейства, но Блану достаётся настоящий подарок — медсестра покойного, которая физически не выносит ложь.</p></td>
+      <td style="color: red;">14:28 - 18:45</td>
+      <td style="color: green;">150 - 160</td>
+    </tr>
+    <tr>
+      <th><img style="width: 300px; height: 400px" src="{% static "images/1.png"%}"></th>
+      <td><p class="h4">Достать ножи.</p> 
+      <p>На следующее утро после празднования 85-летия известного автора криминальных романов Харлана Тромби виновника торжества находят мёртвым. Налицо — явное самоубийство, но полиция по протоколу опрашивает всех присутствующих в особняке членов семьи, хотя, в этом деле больше заинтересован частный детектив Бенуа Блан. Тем же утром он получил конверт с наличными от неизвестного и заказ на расследование смерти Харлана. Не нужно быть опытным следователем, чтобы понять, что все приукрашивают свои отношения с почившим главой семейства, но Блану достаётся настоящий подарок — медсестра покойного, которая физически не выносит ложь.</p></td>
+      <td style="color: red;">14:28 - 18:45</td>
+      <td style="color: green;">150 - 160</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+</div>
+</div>
+<div class="col-md-1"></div>
+</div>
+</div>
+<br><br>
+{% endblock %}
